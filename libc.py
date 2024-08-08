@@ -7,7 +7,7 @@ app_name = "" # Enter the name of the app to be monitored here.
 
 def on_message(message, data):
     if message['type'] == 'send':
-        print(f"[Message from EmuTrace]: {message['payload']}")
+        print(f"[Message from SherlockElf]: {message['payload']}")
         with open("dump/strlen_dump.txt", "a") as f:
             f.write(f'{message}\n')
     elif message['type'] == 'error':
